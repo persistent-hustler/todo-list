@@ -1,4 +1,6 @@
+import "./styles/main-styles.css";
 import projectsList from "./data/projects-list";
+import { projectsDOM } from "./dom/projects-bar";
 import todosArray from "./data/todos-array";
 import Todo from "./modules/todo-class";
 import newProject from "./modules/new-project";
@@ -18,3 +20,5 @@ import deleteProject from "./modules/delete-project";
 // displayCards = todosArray.filter((todo)=> todo.title==='Title2');
 
 // console.log(displayCards);
+export let currentProject = [];
+projectsDOM(projectsList);
