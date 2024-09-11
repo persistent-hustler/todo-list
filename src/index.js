@@ -3,12 +3,12 @@ import projectsList from "./data/projects-list";
 import { projectsDOM } from "./dom/projects-bar";
 import todosArray from "./data/todos-array";
 import Todo from "./modules/todo-class";
-import newProject from "./modules/new-project";
-import deleteProject from "./modules/delete-project";
+import showCard from "./dom/show-card";
 
 
-// new Todo(projectsList.default, "Title", "Description", new Date(), 1);
-// new Todo(newProject("dummy"), "Title2", "Description", new Date(), 1);
+new Todo(projectsList.default, "Title", "Description", new Date(), 1);
+new Todo(projectsList.project1, "Title1", "Description", new Date(), 1);
+new Todo(projectsList.project2, "Title2", "Description", new Date(), 1);
 
 
 // let displayCards = todosArray;
@@ -20,5 +20,7 @@ import deleteProject from "./modules/delete-project";
 // displayCards = todosArray.filter((todo)=> todo.title==='Title2');
 
 // console.log(displayCards);
-export let currentProject = [];
 projectsDOM(projectsList);
+showCard(todosArray[0]);
+showCard(todosArray[1]);
+showCard(todosArray[2]);

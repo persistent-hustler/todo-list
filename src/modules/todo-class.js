@@ -5,7 +5,7 @@ export default class {
         this.project = project;
         this.title = title;
         this.description = description;
-        this.dueDate = dueDate;
+        this.dueDate = `${dueDate.getDate()}-${dueDate.getMonth()+1}-${dueDate.getFullYear()}`;
         this.priority = priority;
 
         this.id = Date.now().toString(36) + Math.random().toString(36).substring(2, 12).padStart(12, 0);
